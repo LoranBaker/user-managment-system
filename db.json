@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 7,
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test@gmail.com",
+      "password": "test1123"
+    },
+    {
+      "id": 8,
+      "firstName": "test121",
+      "lastName": "test121",
+      "email": "test121@gmail.com",
+      "password": "test121"
+    },
+    {
+      "id": 9,
+      "firstName": "faruk",
+      "lastName": "faruk",
+      "email": "faruk@gmail.com",
+      "password": "faruk1213"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
