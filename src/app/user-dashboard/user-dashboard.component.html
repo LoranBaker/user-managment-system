@@ -2,8 +2,9 @@
     <div class="container-fluid">
         <h1 style="color: aliceblue;">User Managment System</h1>
         <div class="d-flex">
-            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add User</button>
-        </div>
+            <button (click)="clickAddUser()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Add User</button>
+            <button routerLink="/login" class="btn btn-danger mx-2">Logout</button>
+          </div>
     </div>
 </nav>
 
@@ -64,8 +65,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" id="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" (click)="postUserData()" class="btn btn-primary">Add</button>
-          <button type="button" (click)="updateUser()" class="btn btn-primary">Update</button>
+          <button type="button" *ngIf="showAdd" (click)="postUserData()" class="btn btn-primary">Add</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateUser()" class="btn btn-primary">Update</button>
         </div>
       </div>
     </div>

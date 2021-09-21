@@ -1,13 +1,6 @@
 {
   "posts": [
     {
-      "id": 7,
-      "firstName": "test",
-      "lastName": "test",
-      "email": "test@gmail.com",
-      "password": "test1123"
-    },
-    {
       "id": 8,
       "firstName": "test121",
       "lastName": "test121",
@@ -20,6 +13,27 @@
       "lastName": "faruk",
       "email": "faruk@gmail.com",
       "password": "faruk1213"
+    },
+    {
+      "id": 10,
+      "firstName": "Alen",
+      "lastName": "frale",
+      "email": "alen.avdic@gmail.com",
+      "password": "alen.avdic.kogor"
+    },
+    {
+      "firstName": "Vedad",
+      "lastName": "Kurtović",
+      "email": "loran7081@gmail.com",
+      "password": "asdasdasdas",
+      "id": 11
+    },
+    {
+      "firstName": "Faruk",
+      "lastName": "topuz",
+      "email": "topuz@gmail.com",
+      "password": "faruk123",
+      "id": 12
     }
   ],
   "comments": [],

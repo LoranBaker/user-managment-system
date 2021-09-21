@@ -14,6 +14,8 @@ export class UserDashboardComponent implements OnInit {
   formValue !: FormGroup;
   userModelObject : UserModel = new UserModel();
   userData !: any;
+  showAdd !: boolean;
+  showUpdate !: boolean;
   constructor(private formBuilder : FormBuilder, 
     private api : ApiService) { }
 
@@ -29,6 +31,13 @@ export class UserDashboardComponent implements OnInit {
     })
     this.getAllUsers();
   }
+
+  clickAddUser(){
+    this.formValue.reset();
+    this.showAdd = true;
+    this.showUpdate = false;
+  }
+
 
   postUserData(){
     this.userModelObject.firstName = this.formValue.value.firstName;
@@ -66,6 +75,9 @@ export class UserDashboardComponent implements OnInit {
   }
 
   editUser(row: any){
+    this.showAdd = false;
+    this.showUpdate = true;
+    this.userModelObject.id = row.id;
     this.formValue.controls['firstName'].setValue(row.firstName)
     this.formValue.controls['lastName'].setValue(row.lastName)
     this.formValue.controls['email'].setValue(row.email)
@@ -77,6 +89,14 @@ export class UserDashboardComponent implements OnInit {
     this.userModelObject.lastName = this.formValue.value.lastName;
     this.userModelObject.email = this.formValue.value.email;
     this.userModelObject.password = this.formValue.value.password;
+
     this.api.updateUser(this.userModelObject,this.userModelObject.id)
+    .subscribe(res=>{
+      alert("Updated successfully!")
+      let ref = document.getElementById('close')
+      ref?.click();
+      this.formValue.reset();
+      this.getAllUsers();
+    })
   }
 }
