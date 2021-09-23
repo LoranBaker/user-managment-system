@@ -8,18 +8,11 @@
       "password": "test121"
     },
     {
-      "id": 9,
-      "firstName": "faruk",
-      "lastName": "faruk",
-      "email": "faruk@gmail.com",
-      "password": "faruk1213"
-    },
-    {
       "id": 10,
-      "firstName": "Alen",
-      "lastName": "frale",
-      "email": "alen.avdic@gmail.com",
-      "password": "alen.avdic.kogor"
+      "firstName": "tese",
+      "lastName": "test1",
+      "email": "test.tes2@gmail.com",
+      "password": "test11"
     },
     {
       "firstName": "Vedad",

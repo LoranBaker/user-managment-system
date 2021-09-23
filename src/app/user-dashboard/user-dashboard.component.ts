@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {FormBuilder,FormGroup} from '@angular/forms'
 import { UserModel } from './user.model';
 import { ApiService } from '../shared/api.service';
@@ -17,10 +17,8 @@ export class UserDashboardComponent implements OnInit {
   showAdd !: boolean;
   showUpdate !: boolean;
   constructor(private formBuilder : FormBuilder, 
-    private api : ApiService) { }
-
-
-
+    private api : ApiService) { 
+    }
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
